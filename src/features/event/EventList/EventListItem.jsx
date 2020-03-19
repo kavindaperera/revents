@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 import { Segment, Item, Icon, List, Button } from "semantic-ui-react";
 import EventListAttendee from "./EventListAttendee";
@@ -32,7 +33,7 @@ class EventListItem extends Component {
         </Segment>
         <Segment secondary>
           <List horizontal>
-            {event.attendees.map((attendee) => (
+            {event.attendee && event.attendees.map((attendee) => (
               <EventListAttendee key={attendee.id}  attendee={attendee} />
             ))}
           </List>
