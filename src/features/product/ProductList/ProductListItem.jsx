@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Image, Rating, Button, Grid, Icon } from "semantic-ui-react";
+import { Card, Image, Rating, Button, Icon } from "semantic-ui-react";
 class ProductListItem extends Component {
   render() {
     const { product } = this.props;

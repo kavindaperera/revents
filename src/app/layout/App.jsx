@@ -18,20 +18,26 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
         </Switch>
-        <div>
-          <NavBar />
-          <Container className="main">
-            <Switch>
-              <Route path="/events" component={EventDashboard} />
-              <Route path="/products" component={ProductDashboard} />
-              <Route path="/event/:id" component={EventDetailedPage} />
-              <Route path="/people" component={PeopleDashboard} />
-              <Route path="/profile/:id" component={UserDetailedPage} />
-              <Route path="/settings" component={SettingsDashboard} />
-              <Route path="/createEvents" component={EventForm} />
-            </Switch>
-          </Container>
-        </div>
+
+        <Route
+          path="/(.+)"
+          render={() => (
+            <div>
+              <NavBar />
+              <Container className="main">
+                <Switch>
+                  <Route path="/events" component={EventDashboard} />
+                  <Route path="/products" component={ProductDashboard} />
+                  <Route path="/event/:id" component={EventDetailedPage} />
+                  <Route path="/people" component={PeopleDashboard} />
+                  <Route path="/profile/:id" component={UserDetailedPage} />
+                  <Route path="/settings" component={SettingsDashboard} />
+                  <Route path="/createEvents" component={EventForm} />
+                </Switch>
+              </Container>
+            </div>
+          )}
+        />
       </div>
     );
   }

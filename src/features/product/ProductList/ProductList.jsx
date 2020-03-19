@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProductListItem from "./ProductListItem";
-import { Card, Grid } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 class ProductList extends Component {
   render() {
     const { products } = this.props;
