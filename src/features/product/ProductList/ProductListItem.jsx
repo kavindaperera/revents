@@ -9,7 +9,7 @@ class ProductListItem extends Component {
         <Card >
           <Image src={product.photoURL} wrapped ui={false} />
           <Card.Content>
-            <Card.Header>{product.productName}</Card.Header>
+            <Card.Header style={{overflow: 'hidden',display: 'block'}}>{product.productName}</Card.Header>
           </Card.Content>
           <Card.Content extra textAlign='center'>
             <Card.Header size='tiny'>{product.price}</Card.Header>
