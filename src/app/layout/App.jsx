@@ -3,7 +3,6 @@ import { Container } from "semantic-ui-react";
 import { Route, Switch } from "react-router-dom";
 import EventDashboard from "../../features/event/EventDashboard/EventDashboard";
 import NavBar from "../../features/nav/NavBar/NavBar";
-import ProductDashboard from "../../features/product/ProductDashboard/ProductDashboard";
 import EventForm from "../../features/event/EventForm/EventForm";
 import EventDetailedPage from "../../features/event/EventDetailed/EventDetailedPage";
 import PeopleDashboard from "../../features/user/PeopleDashboard/PeopleDashboard";
@@ -28,7 +27,6 @@ class App extends Component {
               <Container className="main">
                 <Switch>
                   <Route path="/events" component={EventDashboard} />
-                  <Route path="/products" component={ProductDashboard} />
                   <Route path="/test" component={TestComponent} />
                   <Route path="/event/:id" component={EventDetailedPage} />
                   <Route path="/manage/:id" component={EventForm} />
