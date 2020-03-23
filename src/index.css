@@ -80,6 +80,13 @@ body {
 .ui.main.container,
 .main.segment {
   margin-top: 7em;
+  
+}
+
+.ui.nav.container{
+  margin-left: 7em;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .ui.center.aligned.segment.attendance-preview {

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux'
-import { Grid } from "semantic-ui-react";
+import { Grid ,Segment} from "semantic-ui-react";
 import EventList from "../EventList/EventList";
 import {deleteEvent } from '../eventActions';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
+import EventActivity from '../EventActivity/EventActivity'
 
 const mapState = (state) => ({
   events: state.events,
@@ -15,7 +16,6 @@ const actions = {
 }
 
 class EventDashboard extends Component {
-
   handleDeleteEvent = eventId => () => {
     this.props.deleteEvent(eventId);
   };
@@ -25,7 +25,8 @@ class EventDashboard extends Component {
     if (loading) return <LoadingComponent inverted={true}/>
     return (
       <div>
-        <Grid>
+
+        <Grid >
           <Grid.Column width={10}>
             <EventList
               deleteEvent={this.handleDeleteEvent}
@@ -33,7 +34,7 @@ class EventDashboard extends Component {
             />
           </Grid.Column>
           <Grid.Column width={6}>
-            
+            <EventActivity/>
           </Grid.Column>
         </Grid>
       </div>

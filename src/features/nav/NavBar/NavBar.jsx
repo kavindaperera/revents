@@ -36,7 +36,7 @@ class NavBar extends Component {
     const authenticated = auth.authenticated;
     return (
       <Menu inverted fixed="top">
-        <Container>
+        <Container fluid className="nav">
           <Menu.Item as={Link} to="/" header>
             <img src="/assets/logo.png" alt="logo" />
             Re-vents
