@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment,Grid, Container, Header, Image, Button, Icon } from 'semantic-ui-react';
+import { Segment, Container, Header, Image, Button, Icon } from 'semantic-ui-react';
 const HomePage = ({history}) => {
     return (
             <Segment inverted textAlign='center' vertical className='masthead'>
