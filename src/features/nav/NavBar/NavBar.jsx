@@ -6,15 +6,14 @@ import { NavLink, Link, withRouter } from "react-router-dom";
 import SignedOutMenu from "../Menus/SignedOutMenu";
 import SignedInMenu from "../Menus/SignedInMenu";
 import { openModal } from '../../modals/modalActions'
-import { logout } from '../../auth/authActions'
 
 const actions = {
-  openModal,
-  logout
+  openModal
 };
 
 const mapState = (state) => ({
-  auth: state.firebase.auth
+  auth: state.firebase.auth,
+  profile: state.firebase.profile
 })
 
 class NavBar extends Component {
@@ -33,7 +32,7 @@ class NavBar extends Component {
   }
 
   render() {
-    const { auth } = this.props;
+    const { auth, profile } = this.props;
     const authenticated = auth.isLoaded && !auth.isEmpty;
     return (
       <Menu inverted fixed="top">
@@ -61,7 +60,7 @@ class NavBar extends Component {
             </Menu.Item>
           )}
           {authenticated ? (
-            <SignedInMenu auth={auth} signOut={this.handleSignedOut} />
+            <SignedInMenu profile={profile} signOut={this.handleSignedOut} />
           ) : (
             <SignedOutMenu signIn={this.handleSignedIn} register={this.handleRegister} />
           )}
