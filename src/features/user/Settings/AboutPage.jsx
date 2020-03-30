@@ -20,7 +20,7 @@ const AboutPage = ({ pristine, submitting, handleSubmit, updateProfile }) => {
   return (
     <Segment>
       <Header dividing size="large" content="About Me" />
-      <p>Complete your profile to get the most out of this site</p>
+      <p>Complete your profile to get the most out of Re-vents</p>
       <Form onSubmit={handleSubmit(updateProfile)}>
         <Form.Group inline>
           <label>Tell us your status: </label>
