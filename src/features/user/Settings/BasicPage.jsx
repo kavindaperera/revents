@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {Segment, Form, Header, Divider, Button} from 'semantic-ui-react';
 import {Field, reduxForm} from 'redux-form';
 import moment from 'moment';
-import DateInput from "../../../app/common/form/DateInput";
-import PlaceInput from "../../../app/common/form/PlaceInput";
-import TextInput from "../../../app/common/form/TextInput";
-import RadioInput from "../../../app/common/form/RadioInput";
+import DateInput from "../../../../../../React-Redux-Firestore/revents/src/app/common/form/DateInput";
+import PlaceInput from "../../../../../../React-Redux-Firestore/revents/src/app/common/form/PlaceInput";
+import TextInput from "../../../../../../React-Redux-Firestore/revents/src/app/common/form/TextInput";
+import RadioInput from "../../../../../../React-Redux-Firestore/revents/src/app/common/form/RadioInput";
 
 class BasicPage extends Component {
 
